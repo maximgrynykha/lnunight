@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- Lato font -->
+        <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+
+         <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+        <!-- UIkit CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css" />
+
+        <!-- Jquery connnection -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- UIkit JS -->
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit-icons.min.js"></script>
+
+        <title>Hello, world!</title>
+
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                user-select: none !important;
+                overflow: hidden;
+            }
+
+
+            ::-webkit-scrollbar {
+                display: none;
+            }
+
+            .banner-wrapper {
+                width: 100%;
+                height: 100vh;
+                background: #010101;
+                
+                display: flex;
+                justify-content: center;
+            }
+
+            .media-wrapper {
+                position: static;
+                height: 100%;
+                width: 100%;
+            }
+
+            .media-wrapper::before {
+                content: '';
+                display: block;
+                width: 0;
+                height: 100vh;
+                background-color: #f3f2f7;
+            }
+
+            .content {
+                overflow: hidden;
+                position: relative;
+                height: 100vh;
+
+                background: #010101;
+                opacity: .88;
+            }
+
+            .clearfix:after {
+                clear: both;
+            }
+
+            .clearfix:after, .clearfix:before {
+                content: " ";
+                display: table;
+            } 
+
+            .col-md-4 {
+                text-align: center;
+            }
+            .__first_screen_container {
+                align-self: center;
+
+                margin-top: 0;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 0;
+                height: 700px;
+
+                background-image: url('img/1_fin.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                z-index: 1;
+                position: relative;
+
+                border-radius: 10px;
+            }
+            .__first_screen_container::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                z-index: 2;
+                background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7483368347338936) 60%, rgba(255,255,255,0) 100%);
+                border-radius: 10px;
+            }
+            .__second_screen_container {
+                align-self: center;
+
+                margin-top: 0;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 0;
+                height: 700px;
+
+                background: #010101;
+
+                z-index: 1;
+                position: relative;
+
+                border-radius: 10px;
+            }
+            .__second_screen_container::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                z-index: 2;
+                background: linear-gradient(70deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 80%, rgba(255,255,255,0) 100%);
+                border-radius: 10px;
+            }
+
+
+            .__main_title {
+                margin-top: 100px;
+            }
+            .__main_title > .row > h1 {
+                font-family: "Roboto", Arial, Helvetica, sans-serif;
+                font-size: 32px;
+                text-align: left;
+                font-weight: bold;
+                text-shadow: none;
+                color: whitesmoke;
+                z-index: 3;
+                line-height: 1.75;
+
+            }
+            .__main_title > .row > span {
+                font-family: "Roboto", Arial, Helvetica, sans-serif;
+                font-size: 18px;
+                text-align: left;
+                font-weight: normal;
+                text-shadow: none;
+                z-index: 3;
+                color: #eee;
+                line-height: 1.75;
+            }
+
+            .__slider {
+                margin-top: 120px;
+                height: 200px;
+                width: 100%;
+                margin: 120px auto 0 auto;
+            }
+            
+            .__box {
+                padding: 5px;
+                border: 3px solid transparent;
+            }
+
+            .__box > img {
+                border-radius: 10px;
+            }
+
+            .__box:hover{
+                border: 3px solid whitesmoke;
+                border-radius: 12px;
+            }
+
+            .__second_screen {   
+                margin-top: 230px;
+                width: 100%;
+                height: 100vh;
+            }
+            .__second_screen > span {
+                color: whitesmoke;
+                font-family: "Roboto", Arial, Helvetica, sans-serif;
+                font-size: 18px;
+                text-align: left;
+                font-weight: normal;
+                text-shadow: none;
+                color: #eee;
+                line-height: 1.75;
+            }
+
+            .__screen_toogler{
+                
+                font-family: "Roboto", Arial, Helvetica, sans-serif;
+                z-index: 9999;
+                display: inline-block;
+                color: whitesmoke;
+                border-radius: 10px;
+                font-size: 15px;
+                font-weight: 600;
+                margin: auto;
+                padding: 12px 20px;
+                text-align: center;
+                vertical-align: middle;
+                outline: none;
+                text-decoration: none;
+                border: 1px solid whitesmoke;
+            }
+            .__screen_toogler:hover {
+                text-decoration: none;
+                outline: none;
+                color: #010101;
+                color: whitesmoke;
+                background: #40a5ff;
+                background: whitesmoke;
+                color: #010101;
+                transition: 200ms ease-out;
+            }
+
+            .__download_button {
+                z-index: 99; 
+                font-size: 18px; 
+                font-weight: normal; 
+                margin-top: 30px; 
+                border: 1px solid whitesmoke;       
+                padding: 5px 20px; 
+                border-radius: 8px;
+                color: whitesmoke;
+            }
+            .__download_button:hover {
+                background: whitesmoke;
+                color: #010101;
+                transition: 200ms ease-out;
+                text-decoration: none;
+            }
+            
+
+            .__second_screen_footer {
+                z-index: 9999;
+                margin-top: 200px;
+                height: 200px;
+                border-top: 1px solid whitesmoke;
+                padding: 50px auto;
+            }
+            .__second_screen_footer > .row > p {
+                color: whitesmoke;
+                font-family: 16px;
+                line-height: 1.75;
+
+            }
+
+
+            .col-md-4 {
+                text-align: left;
+            }
+            .col-md-4 > .row > .__developer{
+                display: block;
+                width: 100%;
+                color: whitesmoke;
+                font-weight: normal;
+                font-size: 16px;
+            }
+            .col-md-12 > .row > p{
+                margin-top: 20px;
+                color: whitesmoke;
+                font-size: 16px;
+                font-weight: normal;
+            }
+
+
+        </style>
+    </head>
+    <body> 
+        <div class="container-fluid" id="anchor_1">
+            <div class="row">
+                <div class="banner-wrapper">
+                   <div class="col-md-9 __first_screen_container">
+                       <div class="row">
+
+                            <div class="col-md-1">
+                                <div class="row">
+                                    <a href="#anchor_2" class="__screen_toogler" id="__first_screen">↓</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 __main_title">
+                                <div class="row">
+                                    <h1>НІЧ У ЛНУ</h1>
+                                    <span>
+                                        Чи хотіли б ви колись втекти з університету? А можливо навпаки – 
+                                        залишитись там на усю ніч? Уявіть себе на місці надзвичайно 
+                                        втомленого студента, який заснув на парі, а прокинувся, коли 
+                                        в університеті не було б вже ані душі... Думаєте так легко вийти 
+                                        з власного ЛНУ вночі? Подивимося, чи вам це вдасться...
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-5"></div>
+                            <div class="col-md-12 __slider">
+                                <div class="row">
+                                    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider style="width: 84%; margin: 0 auto; z-index: 9997; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+
+                                        <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
+                                            <li class="__box">
+                                                <img src="img/1.jpg" alt="">
+                                                <div class="uk-position-center uk-panel"></div>
+                                            </li>
+                                            <li class="__box">
+                                                <img src="img/2.jpg" alt="">
+                                                <div class="uk-position-center uk-panel"></div>
+                                            </li>
+                                            <li class="__box">
+                                                <img src="img/3.jpg" alt="">
+                                                <div class="uk-position-center uk-panel"></div>
+                                            </li>
+                                            <li class="__box">
+                                                <img src="img/4.jpg" alt="">
+                                                <div class="uk-position-center uk-panel"></div>
+                                            </li>
+                                            <li class="__box">
+                                                <img src="img/5.jpg" alt="">
+                                                <div class="uk-position-center uk-panel"></div>
+                                            </li>
+                                        </ul>
+
+                                        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                                        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+                   </div>
+                </div>
+
+            </div> <!-- row -->
+        </div> <!-- container -->
+        <div class="container-fluid" id="anchor_2">
+            <div class="row">
+                <div class="banner-wrapper" id="bottom_screen">
+                    <div class="col-md-9 __second_screen_container">
+                        <div class="row">
+
+                            <div class="col-md-1">
+                                <div class="row">
+                                    <a href="#anchor_1" class="__screen_toogler" id="__second_screen">↑</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 __main_title">
+                                <div class="row">
+                                    <span>
+                                        Поринте у світ загадкових подорожей, та неочікуваний зустрічей... 
+                                        Таємниці чекають на вас у нічній подорожі львівськім національний университом
+                                    </span>
+                                    <a href="#" class="__download_button"><span>Завантажити</span></a>
+                                </div>
+                            </div>
+                            <div class="col-md-5"></div>
+                            <div class="col-md-1"></div>
+                            <div class="col-md-9 __second_screen_footer">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <p>Над проектом працювали</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="row">
+                                            <div class="__developer">Любінський Богдан</div>
+                                            <div class="__developer">Сергій Гудак</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="row">
+                                            <div class="__developer">Сидор Анастасія</div>
+                                            <div class="__developer">Іван Бехта</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="row">
+                                            <div class="__developer">Смирнава Леся</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <p style="margin-top: 50px;">Зроблено за з любов'ю та кофеїном. &#169; ЛНУ імені Івана Франка.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(".__box > img").click(function(event){
+                $(".__first_screen_container").css({
+                    "background-image" : "url(" + $(this).attr('src') + ")"
+                });
+            });
+        </script>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    </body>
+</html>
