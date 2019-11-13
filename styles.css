@@ -133,7 +133,7 @@ body {
 }
 .__box:hover{
     border: 3px solid whitesmoke;
-    border-radius: 12px;
+    border-radius: 16px;
 }
 .__second_screen {   
     margin-top: 230px;
