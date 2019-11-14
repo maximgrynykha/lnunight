@@ -296,7 +296,7 @@ body {
 }
     
 .col-md-1 {
-    margin-top: 35px !important;
+    margin-top: 35px;
 }
 
 .col-md-1 > .row {
