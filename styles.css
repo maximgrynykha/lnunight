@@ -294,6 +294,10 @@ body {
     border: 1px solid whitesmoke;
     z-index: 99;
 }
+    
+.col-md-1 {
+    margin-top: 35px !important;
+}
 
 .col-md-1 > .row {
     margin: 0 !important;
